@@ -2,6 +2,7 @@ name: Code signing
 
 on:
   workflow_dispatch:
+  push:
 
 permissions: read-all
 
@@ -40,7 +41,7 @@ jobs:
 
           # Path of code object to be signed.
           # Supported File Types: acm, ax, bin, cab, cpl, dll, drv, efi, exe, mui, ocx, scr, sys, tsp, msi, ps1, ps1xml, js, vbs, wsf, jar
-          file_path: ${GITHUB_WORKSPACE}/*.exe
+          file_path: ${GITHUB_WORKSPACE}/PKSim.exe
 
           # Input directory for code objects to be signed, have hashes computed, or pick unsigned files and corresponding hashes for signing.
           # dir_path: ${GITHUB_WORKSPACE}
