@@ -67,3 +67,9 @@ jobs:
 
           # Code signing method. Default is v1. Supported values: v1, v2
           signing_method: v1
+          
+      - name: Push signed exe as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: signed_PKSim.exe
+          path: ./PKSim.exe
